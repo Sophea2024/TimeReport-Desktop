@@ -1,0 +1,526 @@
+/* =====================================================
+   REPORTS OVERVIEW PAGE
+===================================================== */
+
+.reports-page {
+  width: 100%;
+  margin: 0;
+  padding: 30px 36px 60px;
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.reports-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.reports-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.reports-header p {
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+/* =====================================================
+   SECTION TITLES
+===================================================== */
+
+.section-title {
+  margin-bottom: 22px;
+}
+
+.section-title h2 {
+  margin: 0;
+  font-size: 21px;
+}
+
+.section-title p {
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* =====================================================
+   REPORT SELECTOR
+===================================================== */
+
+.report-selector {
+  width: 100%;
+  padding: 26px;
+  margin-bottom: 28px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-sizing: border-box;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(180px, 1.2fr)
+    minmax(160px, 1fr)
+    minmax(160px, 1fr)
+    minmax(130px, 0.7fr);
+  gap: 18px;
+}
+
+.filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-field span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.filter-field input,
+.filter-field select {
+  width: 100%;
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.filter-field input:focus,
+.filter-field select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* =====================================================
+   TWO COLUMN REPORT AREA
+===================================================== */
+
+.report-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+  margin-bottom: 24px;
+}
+
+/* =====================================================
+   REPORT CARD
+===================================================== */
+
+.report-card {
+  min-width: 0;
+  padding: 26px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.report-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.report-card-header h2 {
+  margin: 0;
+  font-size: 21px;
+}
+
+.report-card-header p {
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.report-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #f3f4f6;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+/* =====================================================
+   STATISTICS
+===================================================== */
+
+.report-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.stat-card {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fafafa;
+  box-sizing: border-box;
+}
+
+.stat-card span {
+  display: block;
+  margin-bottom: 8px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.stat-card strong {
+  display: block;
+  color: #111827;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.stat-card small {
+  display: block;
+  margin-top: 4px;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+/* =====================================================
+   ÜBERSTUNDEN UND FEHLZEIT
+===================================================== */
+
+.stat-overtime {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.stat-overtime span {
+  color: #15803d;
+}
+
+.stat-overtime strong {
+  color: #15803d;
+}
+
+.stat-deficit {
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.stat-deficit span {
+  color: #dc2626;
+}
+
+.stat-deficit strong {
+  color: #dc2626;
+}
+
+.sick-value {
+  color: #7c3aed;
+  font-weight: 600;
+}
+
+/* =====================================================
+   SOLLZEIT UND ARBEITSZEIT
+===================================================== */
+
+.stat-target {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.stat-target span {
+  color: #475569;
+}
+
+.stat-target strong {
+  color: #334155;
+}
+
+.stat-work {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+.stat-work span {
+  color: #2563eb;
+}
+
+.stat-work strong {
+  color: #2563eb;
+}
+
+/* =====================================================
+   MONTHLY REPORT IN OVERVIEW
+===================================================== */
+
+.monthly-card {
+  width: 100%;
+}
+
+.monthly-stats {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+/* =====================================================
+   DAILY OVERVIEW
+===================================================== */
+
+.daily-overview {
+  margin-top: 30px;
+  padding-top: 26px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.overview-header {
+  margin-bottom: 18px;
+}
+
+.overview-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.overview-header p {
+  margin: 5px 0 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.report-table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+.report-table th,
+.report-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.report-table th {
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  color: #4b5563;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.report-table td {
+  color: #374151;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.report-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.report-table tbody tr:hover {
+  background: #fafafa;
+}
+
+.report-table th:nth-child(1),
+.report-table td:nth-child(1) {
+  width: 18%;
+}
+
+.report-table th:nth-child(2),
+.report-table td:nth-child(2) {
+  width: 18%;
+}
+
+.report-table th:nth-child(3),
+.report-table td:nth-child(3) {
+  width: 12%;
+}
+
+.report-table th:nth-child(4),
+.report-table td:nth-child(4) {
+  width: 13%;
+}
+
+.report-table th:nth-child(5),
+.report-table td:nth-child(5) {
+  width: 13%;
+}
+
+.report-table th:nth-child(6),
+.report-table td:nth-child(6) {
+  width: 13%;
+}
+
+.report-table th:nth-child(7),
+.report-table td:nth-child(7) {
+  width: 13%;
+}
+
+/* =====================================================
+   WOCHENENDE / FEIERTAG / KRANK / AUSRICHTUNG
+===================================================== */
+
+.report-table tbody tr.weekend-row {
+  background: #f8fafc;
+}
+
+.report-table tbody tr.weekend-row td {
+  color: #94a3b8;
+}
+
+.report-table tbody tr.weekend-row:hover {
+  background: #f1f5f9;
+}
+
+.report-table tbody tr.holiday-row {
+  background: #fffbeb;
+}
+
+.report-table tbody tr.holiday-row td {
+  color: #92400e;
+}
+
+.report-table tbody tr.holiday-row:hover {
+  background: #fef3c7;
+}
+
+.report-table tbody tr.sick-row {
+  background: #faf5ff;
+}
+
+.report-table tbody tr.sick-row:hover {
+  background: #f3e8ff;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+/* =====================================================
+   SALDO
+===================================================== */
+
+.saldo-positive {
+  color: #15803d;
+  font-weight: 700;
+}
+
+.saldo-negative {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.loading-state {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1200px) {
+  .reports-page {
+    padding: 26px 28px 50px;
+  }
+
+  .monthly-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .filter-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .report-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .report-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .reports-page {
+    padding: 20px 16px 40px;
+  }
+
+  .reports-header h1 {
+    font-size: 27px;
+  }
+
+  .report-selector,
+  .report-card {
+    padding: 20px;
+  }
+
+  .filter-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .report-stats,
+  .monthly-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .report-card-header {
+    gap: 15px;
+  }
+
+  .report-icon {
+    flex-shrink: 0;
+  }
+}

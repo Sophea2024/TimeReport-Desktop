@@ -1,0 +1,335 @@
+/* ========================================
+  Sidebar
+======================================== */
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #1e293b;
+  color: #ffffff;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* ========================================
+  Logo
+======================================== */
+
+.logo {
+  margin-bottom: 30px;
+  flex-shrink: 0;
+}
+
+.logo h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.logo h2 span {
+  color: #38bdf8;
+}
+
+.logo small {
+  display: block;
+  margin-top: 4px;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+/* ========================================
+  Navigation
+======================================== */
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  flex: 1;
+  min-height: 0;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding-right: 4px;
+}
+
+/* Scrollbar Navigation */
+.menu::-webkit-scrollbar {
+  width: 5px;
+}
+
+.menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.menu::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 10px;
+}
+
+.menu::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.55);
+}
+
+/* ========================================
+  Navigation Links
+======================================== */
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 7px;
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+
+  flex-shrink: 0;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+.nav-link.active {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+}
+
+/* ========================================
+  Berichte
+======================================== */
+
+.reports-menu {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.reports-toggle {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  background: transparent;
+}
+
+.reports-toggle:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.reports-chevron {
+  margin-left: auto;
+
+  transition: transform 0.2s ease;
+}
+
+.reports-chevron-open {
+  transform: rotate(180deg);
+}
+
+/* ========================================
+  Berichte - Untermenü
+======================================== */
+
+.submenu {
+  margin-left: 20px;
+  padding-left: 18px;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  margin-top: 2px;
+  margin-bottom: 4px;
+}
+
+.submenu-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 12px;
+  margin: 2px 0;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #cbd5e1;
+  font: inherit;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.submenu-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+.submenu-link.active {
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+}
+
+.submenu-link svg {
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+/* ========================================
+  Footer
+======================================== */
+
+.sidebar-footer {
+  margin-top: auto;
+  flex-shrink: 0;
+
+  padding-top: 8px;
+
+  background: #1e293b;
+}
+
+/* ========================================
+  Benutzer
+======================================== */
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #334155;
+  color: #ffffff;
+
+  font-weight: 600;
+}
+
+.user strong {
+  display: block;
+
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.user small {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+/* ========================================
+   Datenbank
+======================================== */
+
+.backup-button,
+.restore-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 12px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: transparent !important;
+  color: #cbd5e1;
+
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+
+  box-shadow: none !important;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.backup-button:hover,
+.restore-button:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff;
+}
+
+.backup-button:active,
+.restore-button:active {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.backup-button svg,
+.restore-button svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* ========================================
+  Abmelden
+======================================== */
+
+.logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+
+  margin-top: 5px;
+
+  padding: 10px 12px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #cbd5e1;
+
+  font-size: 14px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.logout:hover {
+  background: rgba(239, 68, 68, 0.12);
+  color: #f87171;
+}

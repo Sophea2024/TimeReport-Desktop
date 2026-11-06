@@ -1,0 +1,99 @@
+.tracker-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tracker-card button {
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.start-btn {
+  background: #16a34a;
+  color: white;
+}
+
+.pause-btn {
+  background: #f59e0b;
+  color: white;
+}
+
+.stop-btn {
+  background: #dc2626;
+  color: white;
+}
+
+.tracker-card button:hover {
+  transform: translateY(-2px);
+}
+
+.time-info {
+  margin-top: 20px;
+  padding: 15px;
+  background: #eff6ff;
+  border-left: 5px solid #2563eb;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #0b0b0b;
+}
+
+.work-location {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.work-location p {
+  margin: 0;
+}
+
+.work-location-options {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.work-location-options label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.work-location-options input {
+  margin: 0;
+}
+
+.sick-day-button {
+  background-color: #7c3aed;
+  color: white;
+}
+
+.sick-day-button-active {
+  background: #945cf4;
+  color: white;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .work-location-options {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+}

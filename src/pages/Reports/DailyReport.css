@@ -1,0 +1,357 @@
+/* =====================================================
+   DAILY REPORT
+===================================================== */
+
+.daily-report-page {
+  width: 100%;
+  margin: 0;
+  padding: 30px 36px 60px;
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.daily-report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.daily-report-header h1 {
+  margin: 0;
+  color: #111827;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.daily-report-header p {
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.daily-section-title {
+  margin-bottom: 22px;
+}
+
+.daily-section-title h2 {
+  margin: 0;
+  font-size: 21px;
+}
+
+.daily-section-title p {
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* =====================================================
+   SELECTOR
+===================================================== */
+
+.daily-report-selector {
+  width: 100%;
+  padding: 26px;
+  margin-bottom: 28px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-sizing: border-box;
+}
+
+.daily-filter-grid {
+  display: grid;
+  grid-template-columns: minmax(180px, 1.2fr);
+  gap: 18px;
+}
+
+.daily-filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.daily-filter-field span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.daily-filter-field input,
+.daily-filter-field select {
+  width: 100%;
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.daily-filter-field input:focus,
+.daily-filter-field select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* =====================================================
+   REPORT CARD
+===================================================== */
+
+.daily-report-card {
+  width: 100%;
+  min-width: 0;
+  padding: 26px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.daily-report-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.daily-report-card-header h2 {
+  margin: 0;
+  font-size: 21px;
+}
+
+.daily-report-card-header p {
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.daily-report-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #f3f4f6;
+  font-size: 20px;
+}
+
+/* =====================================================
+   STATISTICS
+===================================================== */
+
+.daily-report-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.daily-stat-card {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fafafa;
+  box-sizing: border-box;
+}
+
+.daily-stat-card span {
+  display: block;
+  margin-bottom: 8px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.daily-stat-card strong {
+  display: block;
+  color: #111827;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+/* =====================================================
+   STAT COLORS
+===================================================== */
+
+.daily-stat-overtime {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.daily-stat-overtime span,
+.daily-stat-overtime strong {
+  color: #15803d;
+}
+
+.daily-stat-deficit {
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.daily-stat-deficit span,
+.daily-stat-deficit strong {
+  color: #dc2626;
+}
+
+.daily-stat-sick {
+  background: #faf5ff;
+  border-color: #e9d5ff;
+}
+
+.daily-stat-sick span,
+.daily-stat-sick strong {
+  color: #7c3aed;
+}
+
+.daily-stat-target {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.daily-stat-target span {
+  color: #475569;
+}
+
+.daily-stat-target strong {
+  color: #334155;
+}
+
+.daily-stat-work {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+.daily-stat-work span,
+.daily-stat-work strong {
+  color: #2563eb;
+}
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.daily-loading-state {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1200px) {
+  .daily-report-page {
+    padding: 26px 28px 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .daily-report-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .daily-report-page {
+    padding: 20px 16px 40px;
+  }
+
+  .daily-report-header h1 {
+    font-size: 27px;
+  }
+
+  .daily-report-selector,
+  .daily-report-card {
+    padding: 20px;
+  }
+
+  .daily-report-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .daily-report-card-header {
+    gap: 15px;
+  }
+}
+
+.daily-stat-business-trip {
+  background: #fff7ed;
+  border-color: #fed7aa;
+}
+
+.daily-stat-business-trip span,
+.daily-stat-business-trip strong {
+  color: #c2410c;
+}
+
+/* =====================================================
+   PDF-Button
+   ===================================================== */
+
+.daily-pdf-button {
+  width: 100px;
+  height: 40px;
+  padding: 0 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  flex-shrink: 0;
+
+  border: 1px solid #3b82f6;
+  border-radius: 9px;
+  background: #3b82f6;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+  box-sizing: border-box;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.1s ease;
+}
+
+.daily-pdf-button:hover:not(:disabled) {
+  background: #2563eb;
+  border-color: #2563eb;
+  box-shadow: 0 3px 8px rgba(37, 99, 235, 0.22);
+  transform: translateY(-1px);
+}
+
+.daily-pdf-button:active:not(:disabled) {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(37, 99, 235, 0.18);
+}
+
+.daily-pdf-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

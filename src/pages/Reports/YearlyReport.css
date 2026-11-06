@@ -1,0 +1,395 @@
+.yearly-report-scroll {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.yearly-report-page {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.yearly-report-page .reports-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  width: 100%;
+  min-height: 88px;
+  margin-bottom: 28px;
+  padding-top: 4px;
+  box-sizing: border-box;
+
+  background: #f8fafc;
+}
+
+.yearly-report-page .reports-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.yearly-report-title {
+  padding-right: 210px;
+}
+
+.yearly-report-card {
+  width: 100%;
+  padding: 26px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+}
+
+.yearly-report-table-wrapper {
+  width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.yearly-report-table {
+  width: 100%;
+  min-width: 1250px;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: auto;
+  background: #ffffff;
+}
+
+.yearly-report-filters {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: grid;
+  grid-template-columns: 40px 80px 40px;
+  align-items: center;
+  column-gap: 10px;
+
+  width: 180px;
+  height: 40px;
+
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.yearly-report-period {
+  width: 80px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  box-sizing: border-box;
+  font-weight: 600;
+  white-space: nowrap;
+}
+/* =================================
+   PDF-Button
+================================= */
+
+.yearly-pdf-button {
+  height: 40px;
+  width: 180px;
+  padding: 0 14px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  border: 1px solid #3b82f6;
+  border-radius: 9px;
+
+  background: #3b82f6;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  box-sizing: border-box;
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.1s ease;
+}
+
+.yearly-pdf-button:hover:not(:disabled) {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  box-shadow: 0 3px 8px rgba(37, 99, 235, 0.22);
+  transform: translateY(-1px);
+}
+
+.yearly-pdf-button:active:not(:disabled) {
+  background: #1e40af;
+  border-color: #1e40af;
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(37, 99, 235, 0.18);
+}
+
+.yearly-pdf-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =================================
+   Jahres-Navigation
+================================= */
+
+.yearly-report-nav-button {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+
+  background: #f3f4f6;
+  color: #4b5563;
+
+  cursor: pointer;
+  box-sizing: border-box;
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.1s ease;
+}
+
+.yearly-report-nav-button:hover {
+  background: #4f7fb3;
+  border-color: #4f7fb3;
+  color: #ffffff;
+
+  box-shadow: 0 2px 6px rgba(79, 127, 179, 0.2);
+  transform: translateY(-1px);
+}
+
+.yearly-report-nav-button:active {
+  background: #e5e7eb;
+  border-color: #cbd5e1;
+  color: #374151;
+
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.yearly-report-nav-button svg {
+  width: 18px;
+  height: 18px;
+  color: currentColor;
+  stroke-width: 2.5;
+  flex-shrink: 0;
+}
+
+/* =====================================================
+   Arbeitstage – Jahresübersicht
+   ===================================================== */
+
+.yearly-workday-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.yearly-workday-card {
+  width: 150px;
+  min-height: 95px;
+  padding: 14px 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.yearly-workday-card span {
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.yearly-workday-card strong {
+  font-size: 25px;
+  line-height: 1;
+  font-weight: 700;
+  color: #111827;
+}
+
+.yearly-workday-card small {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* =====================================================
+   Arbeitstage – Header
+   ===================================================== */
+
+.yearly-workday-section {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.yearly-workday-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.yearly-workday-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.yearly-workday-header p {
+  margin: 4px 0 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.yearly-workday-pdf-button {
+  width: 100px;
+  height: 40px;
+  padding: 0 14px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  flex-shrink: 0;
+
+  border: 1px solid #3b82f6;
+  border-radius: 9px;
+  background: #3b82f6;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+  box-sizing: border-box;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.1s ease;
+}
+
+.yearly-workday-pdf-button:hover:not(:disabled) {
+  background: #2563eb;
+  border-color: #2563eb;
+  box-shadow: 0 3px 8px rgba(37, 99, 235, 0.22);
+  transform: translateY(-1px);
+}
+
+.yearly-workday-pdf-button:active:not(:disabled) {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(37, 99, 235, 0.18);
+}
+
+.yearly-workday-pdf-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   Jahresbericht – Tabellen-Design
+========================================= */
+
+.yearly-report-table th {
+  padding: 16px 14px;
+  background: #1e3a5f;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+  text-align: right;
+  white-space: nowrap;
+
+  border-bottom: 2px solid #16304f;
+}
+
+.yearly-report-table th:first-child {
+  text-align: left;
+  border-top-left-radius: 8px;
+}
+
+.yearly-report-table th:last-child {
+  border-top-right-radius: 8px;
+}
+
+.yearly-report-table td {
+  padding: 15px 14px;
+
+  color: #334155;
+  font-size: 13px;
+  text-align: right;
+  white-space: nowrap;
+
+  border-bottom: 1px solid #e5eaf0;
+}
+
+.yearly-report-table td:first-child {
+  text-align: left;
+  font-weight: 600;
+  color: #1e3a5f;
+}
+
+.yearly-report-table tbody tr:nth-child(even) {
+  background: #f1f5f9;
+}
+
+.yearly-report-table tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+.yearly-report-table tbody tr:hover {
+  background: #e8f1fc;
+}
+
+.yearly-report-table tbody tr:last-child td {
+  border-bottom: none;
+}

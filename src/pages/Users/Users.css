@@ -1,0 +1,484 @@
+.users-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 28px 40px;
+  box-sizing: border-box;
+}
+
+/* ==============================
+   HEADER
+   ============================== */
+
+.users-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.users-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.users-header p {
+  margin: 6px 0 0;
+  color: #777;
+  font-size: 14px;
+}
+
+.user-count {
+  min-width: 80px;
+  padding: 12px 18px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.user-count span {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.user-count small {
+  color: #777;
+  font-size: 12px;
+}
+
+/* ==============================
+   CARD
+   ============================== */
+
+.users-card {
+  width: 100%;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  margin-bottom: 24px;
+  padding: 24px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.card-header {
+  margin-bottom: 22px;
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 650;
+}
+
+.card-header p {
+  margin: 5px 0 0;
+  color: #777;
+  font-size: 13px;
+}
+
+/* ==============================
+   FORMULAR
+   ============================== */
+
+.user-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.form-group label {
+  margin-bottom: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+.optional {
+  margin-left: 7px;
+  color: #999;
+  font-weight: 400;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 42px;
+  box-sizing: border-box;
+  padding: 0 12px;
+  border: 1px solid #d9dde3;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 14px;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #4f7cff;
+  box-shadow: 0 0 0 3px rgba(79, 124, 255, 0.12);
+}
+
+.form-group input::placeholder {
+  color: #aaa;
+}
+
+/* ==============================
+   FORM BUTTONS
+   ============================== */
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.btn-benutzer-anlegen {
+  font-size: 14px;
+}
+
+.btn {
+  min-height: 40px;
+  padding: 0 17px;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition:
+    transform 0.15s,
+    box-shadow 0.2s,
+    opacity 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 3px 8px rgba(37, 99, 235, 0.22);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 5px 12px rgba(37, 99, 235, 0.3);
+}
+
+.btn-secondary {
+  background: #f1f3f5;
+  color: #444;
+}
+
+.btn-secondary:hover {
+  background: #e5e7eb;
+}
+
+/* ==============================
+   TABLE
+   ============================== */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.users-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.users-table th {
+  padding: 13px 15px;
+  background: #f8f9fb;
+  color: #555;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.users-table td {
+  padding: 13px 15px;
+  background: #ffffff;
+  border-bottom: 1px solid #edf0f3;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.users-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.users-table tbody tr:hover td {
+  background: #fafbfc;
+}
+
+/* Spalten */
+
+.users-table th:nth-child(1),
+.users-table td:nth-child(1) {
+  width: 25%;
+}
+
+.users-table th:nth-child(2),
+.users-table td:nth-child(2) {
+  width: 24%;
+}
+
+.users-table th:nth-child(3),
+.users-table td:nth-child(3) {
+  width: 23%;
+}
+
+.users-table th:nth-child(4),
+.users-table td:nth-child(4) {
+  width: 28%;
+}
+
+/* ==============================
+   USERNAME
+   ============================== */
+
+.username-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.username-cell span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.user-avatar {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef2ff;
+  color: #4169e1;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ==============================
+   ROLLE
+   ============================== */
+
+.role-badge {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  padding: 5px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.role-badge.employee {
+  background: #eef6ff;
+  color: #2563eb;
+}
+
+.role-badge.admin {
+  background: #fff4e5;
+  color: #c56a00;
+}
+
+/* ==============================
+   AKTIONEN
+   ============================== */
+
+.actions-column {
+  text-align: right !important;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+}
+
+.action-btn {
+  height: 34px;
+  padding: 0 10px;
+  border-radius: 7px;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    transform 0.15s;
+}
+
+.action-btn:hover {
+  transform: translateY(-1px);
+}
+
+.edit-btn {
+  background: #eff6ff;
+  color: #2563eb;
+  border-color: #dbeafe;
+}
+
+.edit-btn:hover {
+  background: #dbeafe;
+  border-color: #bfdbfe;
+}
+
+.delete-btn {
+  background: #fff1f2;
+  color: #dc2626;
+  border-color: #ffe4e6;
+}
+
+.delete-btn:hover {
+  background: #ffe4e6;
+  border-color: #fecdd3;
+}
+
+/* ==============================
+   EMPTY STATE
+   ============================== */
+
+.empty-state {
+  padding: 50px 20px;
+  text-align: center;
+  color: #777;
+}
+
+.empty-icon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+}
+
+.empty-state h3 {
+  margin: 0;
+  color: #444;
+  font-size: 16px;
+}
+
+.empty-state p {
+  margin: 6px 0 0;
+  font-size: 13px;
+}
+
+/* ==============================
+   LOADING
+   ============================== */
+
+.loading-card {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.loading-card p {
+  margin: 0;
+  color: #777;
+}
+
+.loading-spinner {
+  width: 28px;
+  height: 28px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: users-spin 0.8s linear infinite;
+}
+
+@keyframes users-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+
+@media (max-width: 800px) {
+  .users-page {
+    padding: 20px 16px 30px;
+  }
+
+  .user-form {
+    grid-template-columns: 1fr;
+  }
+
+  .users-header {
+    align-items: flex-start;
+  }
+
+  .users-card {
+    padding: 18px;
+  }
+
+  .action-btn span {
+    display: none;
+  }
+
+  .action-btn {
+    width: 34px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .users-header h1 {
+    font-size: 23px;
+  }
+
+  .user-count {
+    min-width: 55px;
+    padding: 9px;
+  }
+}

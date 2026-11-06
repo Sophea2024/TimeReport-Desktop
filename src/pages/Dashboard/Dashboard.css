@@ -1,0 +1,42 @@
+.dashboard {
+  width: 100%;
+  margin-left: 2em;
+}
+
+.welcome {
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+.cards {
+  width:100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,.08);
+
+  transition: transform .2s, box-shadow .2s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 8px 18px rgba(0,0,0,.12);
+}
+
+.card h3 {
+  margin: 16px 0 8px;
+  color: #1E3A8A;
+}
+
+.card p {
+  color: #6b7280;
+}

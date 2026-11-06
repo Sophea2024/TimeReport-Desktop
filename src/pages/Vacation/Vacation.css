@@ -1,0 +1,214 @@
+.vacation-form-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vacation-form-actions .vacation-button {
+  width: auto;
+  min-width: 0;
+  flex: 0 0 auto;
+}
+
+/* =========================================
+  Buttons
+   ========================================= */
+
+.vacation-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  width: auto;
+  min-width: 0;
+  flex: 0 0 auto;
+
+  padding: 6px 10px;
+
+  border: 1px solid transparent;
+  border-radius: 6px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* =========================================
+   Speichern / Aktualisieren
+   ========================================= */
+
+.vacation-button-primary {
+  background-color: #0362fc;
+  color: #ffffff;
+  border-color: #374151;
+}
+
+.vacation-button-primary:hover {
+  background-color: #1e7afa;
+  border-color: #1f2937;
+}
+
+/* =========================================
+   Abbrechen
+   ========================================= */
+
+.vacation-button-secondary {
+  background-color: #f3f4f6;
+  color: #374151;
+  border-color: #d1d5db;
+}
+
+.vacation-button-secondary:hover {
+  background-color: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+/* =========================================
+  Aktionsbuttons
+   ========================================= */
+
+.vacation-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.vacation-action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  border: 1px solid transparent;
+  border-radius: 6px;
+
+  padding: 6px 9px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+/* =========================================
+  Bearbeiten
+   ========================================= */
+
+.vacation-edit-button {
+  background-color: #f3f4f6;
+  color: #374151;
+  border-color: #d1d5db;
+}
+
+.vacation-edit-button:hover {
+  background-color: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+/* =========================================
+  Löschen
+   ========================================= */
+
+.vacation-delete-button {
+  background-color: #fef2f2;
+  color: #b91c1c;
+  border-color: #fecaca;
+}
+
+.vacation-delete-button:hover {
+  background-color: #f70303;
+  border-color: #fca5a5;
+}
+
+.vacation-list-row {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) 80px auto;
+  align-items: center;
+  gap: 20px;
+}
+
+.vacation-status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.vacation-status-pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.vacation-status-approved {
+  background: #d1e7dd;
+  color: #0f5132;
+}
+
+.vacation-status-rejected {
+  background: #f8d7da;
+  color: #842029;
+}
+
+.vacation-approval-button {
+  padding: 7px 10px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  background: #fff;
+  color: #333;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.vacation-approval-button:hover {
+  background: #f1f3f5;
+}
+
+.vacation-list-header {
+  display: grid;
+  grid-template-columns:
+    minmax(180px, 1fr)
+    80px
+    120px
+    minmax(310px, auto);
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b7280;
+}
+
+@media (max-width: 1050px) {
+  .vacation-list-header {
+    grid-template-columns: minmax(0, 1fr) 80px 120px;
+  }
+
+  .vacation-list-header span:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .vacation-list-header {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .vacation-list-header span:last-child {
+    grid-column: auto;
+  }
+}

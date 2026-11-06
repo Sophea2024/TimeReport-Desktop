@@ -1,0 +1,463 @@
+/* ========================================
+   Einzelzeitnachweis – Grundlayout
+======================================== */
+
+.single-report-page {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 24px;
+  color: var(--text-color, #1f2937);
+}
+
+.single-report-page * {
+  box-sizing: border-box;
+}
+
+/* ========================================
+   Kopfbereich
+======================================== */
+
+.single-report-header {
+  margin-bottom: 24px;
+}
+
+.single-report-header h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  line-height: 1.3;
+}
+
+.single-report-header p,
+.single-report-card-heading p,
+.single-report-section-heading p {
+  margin: 0;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* ========================================
+   Filter- und Inhaltskarten
+======================================== */
+
+.single-report-filter,
+.single-report-card {
+  margin-bottom: 24px;
+  padding: 22px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: var(--card-background, #ffffff);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 4%);
+}
+
+/* ========================================
+   Kartenkopf und Exportbuttons
+======================================== */
+
+.single-report-section-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.single-report-section-heading {
+  display: flex;
+  align-items: flex-start;
+  flex: 1 1 auto;
+  gap: 12px;
+  min-width: 0;
+}
+
+.single-report-section-heading > svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #64748b;
+}
+
+.single-report-section-heading h2,
+.single-report-card-heading h2 {
+  margin: 0 0 6px;
+  font-size: 19px;
+  line-height: 1.35;
+}
+
+.single-report-section-heading p {
+  max-width: 700px;
+}
+
+.single-report-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.single-report-card-heading > svg {
+  flex-shrink: 0;
+  color: #64748b;
+}
+
+/* ========================================
+   Gemeinsames Buttondesign
+======================================== */
+
+.single-report-export-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  gap: 9px;
+  min-height: 44px;
+  width: auto;
+  margin: 0;
+  padding: 11px 18px;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 12%);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.single-report-export-button svg {
+  flex-shrink: 0;
+}
+
+/* Excel – Grün */
+
+.excel-export-button {
+  background-color: #16834a;
+}
+
+.excel-export-button:hover:not(:disabled) {
+  background-color: #116b3b;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgb(22 131 74 / 25%);
+}
+
+/* PDF – Rot */
+
+.pdf-export-button {
+  background-color: #c83e4d;
+}
+
+.pdf-export-button:hover:not(:disabled) {
+  background-color: #a92d3b;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgb(200 62 77 / 25%);
+}
+
+/* Deaktivierte Buttons */
+
+.single-report-export-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* ========================================
+   Excel-Zeitraum – zwei Monatsfelder
+======================================== */
+
+.excel-month-range {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 16px;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 22px;
+}
+
+.excel-month-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.excel-month-field label,
+.single-report-selected-month label {
+  display: block;
+  margin: 0;
+  color: var(--text-color, #334155);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ========================================
+   Monatsauswahl für PDF
+======================================== */
+
+.single-report-selected-month {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 22px;
+}
+
+/* ========================================
+   Einheitliches Design der Monatseingaben
+======================================== */
+
+.excel-month-field input,
+.single-report-selected-month input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  height: 44px;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: var(--card-background, #ffffff);
+  color: var(--text-color, #1f2937);
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.excel-month-field input:focus,
+.single-report-selected-month input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgb(59 130 246 / 15%);
+}
+
+/* ========================================
+   Zusammenfassung: Arbeitszeit, Pause, Tage
+======================================== */
+
+.single-report-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.single-report-summary > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.single-report-summary span {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.single-report-summary strong {
+  color: #1f2937;
+  font-size: 22px;
+  overflow-wrap: anywhere;
+}
+
+/* ========================================
+   Arbeitszeitdetails – Tabellencontainer
+======================================== */
+
+.single-report-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+/* Grundformatierung der Tabelle */
+
+.single-report-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13px;
+}
+
+/* Tabellenkopf */
+
+.single-report-table thead th {
+  padding: 14px 12px;
+  border-bottom: 2px solid #cbd5e1;
+  background: #e8edf3;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Tabellenzellen */
+
+.single-report-table tbody td {
+  padding: 13px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #374151;
+  white-space: nowrap;
+}
+
+/* Abwechselnde Zeilenfarben */
+
+.single-report-month-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.single-report-month-table tbody tr:nth-child(even) {
+  background-color: #f1f5f9;
+}
+
+/* Hover-Effekt */
+
+.single-report-month-table tbody tr:hover {
+  background-color: #e2e8f0;
+}
+
+.single-report-month-table tbody tr:hover td {
+  background-color: transparent;
+}
+
+/* Letzte Datenzeile */
+
+.single-report-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ========================================
+   Monatssumme
+======================================== */
+
+.single-report-month-table tfoot th {
+  padding: 14px 12px;
+  border-top: 2px solid #94a3b8;
+  background-color: #dbe4ee;
+  color: #1f2937;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.single-report-month-table tfoot th:first-child {
+  text-align: left;
+}
+
+/* ========================================
+  Ladeanzeige und Fehlermeldungen
+======================================== */
+
+.single-report-message,
+.single-report-error {
+  padding: 18px 0;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.single-report-error {
+  color: #b91c1c;
+}
+
+/* ========================================
+   Tablet und kleinere Bildschirme
+======================================== */
+
+@media (max-width: 760px) {
+  .single-report-page {
+    padding: 16px;
+  }
+
+  .single-report-filter,
+  .single-report-card {
+    padding: 16px;
+  }
+
+  .single-report-section-top {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .single-report-section-heading {
+    flex: 1 1 100%;
+  }
+
+  .single-report-export-button {
+    margin-left: auto;
+  }
+
+  .single-report-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .single-report-table {
+    width: max-content;
+    min-width: 100%;
+  }
+}
+
+/* ========================================
+   Smartphones
+======================================== */
+
+@media (max-width: 480px) {
+  .single-report-page {
+    padding: 12px;
+  }
+
+  .single-report-header h1 {
+    font-size: 24px;
+  }
+
+  .single-report-section-heading h2,
+  .single-report-card-heading h2 {
+    font-size: 17px;
+  }
+
+  .single-report-section-heading {
+    gap: 9px;
+  }
+
+  .single-report-section-heading > svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .single-report-export-button {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .excel-month-range {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .single-report-selected-month {
+    max-width: none;
+  }
+
+  .single-report-summary > div {
+    padding: 14px;
+  }
+
+  .single-report-summary strong {
+    font-size: 20px;
+  }
+
+  .single-report-table thead th,
+  .single-report-table tbody td,
+  .single-report-month-table tfoot th {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+}
