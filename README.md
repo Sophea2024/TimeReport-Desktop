@@ -30,7 +30,7 @@ Type-safe application development with TypeScript
 
 Note: Adjust this list to match the features currently implemented in the application.
 
-🛠️ Technology Stack
+## 🛠️ Technology Stack
 
 <table>
   <thead>
