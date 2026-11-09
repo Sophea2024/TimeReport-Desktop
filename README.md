@@ -32,12 +32,32 @@ Note: Adjust this list to match the features currently implemented in the applic
 
 ## 🛠️ Technology Stack
 
-| Technology |:---| Purpose |
-|:---|:---|
-| ⚛️ React | User Interface |
-| 📘 TypeScript | Application Development |
-| ⚡ Electron | Desktop Runtime |
-| 🗄️ SQLite | Local Database |
+<table>
+  <thead>
+    <tr>
+      <th width="40%">Technology</th>
+      <th width="60%">Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>⚛️ React</td>
+      <td>User Interface</td>
+    </tr>
+    <tr>
+      <td>📘 TypeScript</td>
+      <td>Application Development</td>
+    </tr>
+    <tr>
+      <td>⚡ Electron</td>
+      <td>Desktop Runtime</td>
+    </tr>
+    <tr>
+      <td>🗄️ SQLite</td>
+      <td>Local Database</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 📊 Dashboard
 ![Dashboard](screenshots/dashboard.png)
