@@ -14,17 +14,21 @@ TimeReport-Desktop is a desktop software project designed to provide a structure
 
 The application combines a modern frontend with a desktop runtime and a local SQLite database.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Features
+
+Professional desktop application
+
+Time tracking and management
+
+Reporting and productivity overview
+
+Local database powered by SQLite
+
+Modern user interface built with React
+
+Type-safe application development with TypeScript
+
+Note: Adjust this list to match the features currently implemented in the application.
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
