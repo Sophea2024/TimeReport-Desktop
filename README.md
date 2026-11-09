@@ -51,3 +51,18 @@ Desktop Runtime
 SQLite
 
 Local Database
+
+### 📊 Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### ⏱️ Time Tracking
+![Time Tracking](screenshots/time-tracking.png)
+
+### 📅 Work Management
+![Work Management](screenshots/work-management.png)
+
+### 📈 Reports & Analytics
+![Reports](screenshots/reports.png)
+
+### ⚙️ Settings
+![Settings](screenshots/settings.png)
