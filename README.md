@@ -1,4 +1,4 @@
-🚀 TimeReport-Desktop
+# 🚀 TimeReport-Desktop
 
 Professional Time Tracking, Reporting & Productivity Management
 
