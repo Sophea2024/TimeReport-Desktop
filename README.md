@@ -30,13 +30,13 @@ Type-safe application development with TypeScript
 
 Note: Adjust this list to match the features currently implemented in the application.
 
-## 🛠️ Technology Stack
+🛠️ Technology Stack
 
 <table>
   <thead>
     <tr>
-      <th width="40%">Technology</th>
-      <th width="60%">Purpose</th>
+      <th align="left" width="35%">Technology</th>
+      <th align="left" width="65%">Purpose</th>
     </tr>
   </thead>
   <tbody>
@@ -46,15 +46,15 @@ Note: Adjust this list to match the features currently implemented in the applic
     </tr>
     <tr>
       <td>📘 TypeScript</td>
-      <td>Application Development</td>
+      <td>Type-safe Application Development</td>
     </tr>
     <tr>
       <td>⚡ Electron</td>
-      <td>Desktop Runtime</td>
+      <td>Desktop Application Framework</td>
     </tr>
     <tr>
       <td>🗄️ SQLite</td>
-      <td>Local Database</td>
+      <td>Local Database Management</td>
     </tr>
   </tbody>
 </table>
