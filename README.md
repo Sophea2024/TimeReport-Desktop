@@ -32,7 +32,7 @@ Note: Adjust this list to match the features currently implemented in the applic
 
 ## 🛠️ Technology Stack
 
-| Technology | Purpose |
+| Technology |:---| Purpose |
 |:---|:---|
 | ⚛️ React | User Interface |
 | 📘 TypeScript | Application Development |
