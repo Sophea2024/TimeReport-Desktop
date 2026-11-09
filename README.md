@@ -8,11 +8,11 @@ Built with React, TypeScript, Electron, and SQLite.
 
 Developed with AI-assisted support.
 
-## Expanding the ESLint configuration
+## Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+TimeReport-Desktop is a desktop software project designed to provide a structured and efficient approach to time tracking, reporting, and productivity management.
 
-- Configure the top-level `parserOptions` property like this:
+The application combines a modern frontend with a desktop runtime and a local SQLite database.
 
 ```js
 export default {
