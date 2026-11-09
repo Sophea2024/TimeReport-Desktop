@@ -62,7 +62,7 @@ Local Database
 ![Work Management](screenshots/work-management.png)
 
 ### 📈 Reports & Analytics
-![Reports](screenshots/reports.png)
+![Reports](screenshots/manthly-report.png)
 
 ### ⚙️ Settings
-![Settings](screenshots/settings.png)
+![Settings](screenshots/setting.png)
